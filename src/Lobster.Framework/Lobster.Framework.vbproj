@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{03B01E8E-7DE5-4C1F-81DF-9178AEA24FA2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Lobster.Framework</RootNamespace>
+    <AssemblyName>Lobster.Framework</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>On</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Lobster.Framework.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Lobster.Framework.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Data.SqlClient" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassModelReader\ClassModel.vb" />
+    <Compile Include="ClassModelReader\ClassModelBroker.vb" />
+    <Compile Include="ClassModelReader\FormModelBuilder.vb" />
+    <Compile Include="Compiler.vb" />
+    <Compile Include="DataTypes.vb" />
+    <Compile Include="ClassModels.vb" />
+    <Compile Include="DomainModel\ClassModel.vb" />
+    <Compile Include="IFactories.vb" />
+    <Compile Include="IServicesProxy.vb" />
+    <Compile Include="ClassModelReader\Bootstrap\StateGraphLoader.vb" />
+    <Compile Include="ClassModelReader\Bootstrap\BootstrapClassModel.vb" />
+    <Compile Include="ClassModelReader\Bootstrap\BootstrapFieldModel.vb" />
+    <Compile Include="LobsterClasses\CompositeModelFactory.vb" />
+    <Compile Include="LobsterClasses\DataType.vb" />
+    <Compile Include="LobsterClasses\ILobsterClass.vb" />
+    <Compile Include="LobsterClasses\LobsterObject\DomainModel\CompositeBroker.vb" />
+    <Compile Include="StateGraph\JsonProxy.vb" />
+    <Compile Include="JsonString.vb" />
+    <Compile Include="LobsterClasses\LobsterObject\ClientServices.vb" />
+    <Compile Include="LobsterClasses\LobsterObject\DomainModel\Component.vb" />
+    <Compile Include="LobsterClasses\LobsterObject\DomainModel\ComponentSet.vb" />
+    <Compile Include="LobsterClasses\LobsterObject\DomainModel\Composite.vb" />
+    <Compile Include="LobsterClasses\LobsterObject\DomainModel\LobsterObject.vb" />
+    <Compile Include="LobsterClasses\StateGraphs\StateGraph.vb" />
+    <Compile Include="LobsterClassModel\ClassModel.vb">
+    </Compile>
+    <Compile Include="LobsterClassModel\PropertyGroupModel.vb" />
+    <Compile Include="LobsterClassModel\PropertyGroupModels.vb" />
+    <Compile Include="ClassModelReader\FieldModel.vb" />
+    <Compile Include="ClassModelReader\FieldModels.vb" />
+    <Compile Include="LobsterClassModel\PropertyPartitionModel.vb" />
+    <Compile Include="LobsterClassModel\PropertyPartitionModels.vb" />
+    <Compile Include="LobsterClasses\StateGraphs\StateGraphBroker.vb" />
+    <Compile Include="LobsterDb.vb" />
+    <Compile Include="LobsterForms\GuiServices.vb" />
+    <Compile Include="LobsterForms\GuiServicesBroker.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Persistance\LobsterCommand.vb" />
+    <Compile Include="Persistance\LobsterConnection.vb" />
+    <Compile Include="Persistance\FrameworkConnection.vb" />
+    <Compile Include="Persistance\LobsterReader.vb" />
+    <Compile Include="RunTime\Session.vb" />
+    <Compile Include="Schema\SchemaBuilder.vb" />
+    <Compile Include="Schema\ClassModelWrapper.vb" />
+    <Compile Include="Schema\LafContextWrapper.vb" />
+    <Compile Include="Schema\Parameters.vb" />
+    <Compile Include="Schema\PropertyModelWrapper.vb" />
+    <Compile Include="Schema\SqlBuilder.vb" />
+    <Compile Include="Schema\Table.vb" />
+    <Compile Include="ServicesRouter.vb" />
+    <Compile Include="StateGraph\StateArray.vb" />
+    <Compile Include="StateGraph\StateObject.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MSScriptControl">
+      <Guid>{0E59F1D2-1FBE-11D0-8FF2-00A0D10038BC}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="SQLDMO">
+      <Guid>{10010001-E260-11CF-AE68-00AA004A34D5}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,16 @@
+LobsterDb
+Copyright(c) 2010, Barry Peerless
+All rights reserved.
+licensing@lobsterdb.com
+
+http://www.lobsterdb.com/license
+
+LobsterDb is licensed under the terms of the AGPL Version 3 license
+
+http://www.lobsterdb.com/license
+
+Makes use of Ext JS - JavaScript Library
+Copyright (c) 2006-2009, Ext JS, LLC
+Released under the terms of the GPL Version 3 license
+
+This work is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
